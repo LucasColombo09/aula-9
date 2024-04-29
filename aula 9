@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>trabalho aula 9</title>
+    <script src="index.js"></script>
+</head>
+<body onload="showWelcomeAlert()">
+    <button onclick="showWelcomeAlert()">Clique aqui</button>
+<script>
+    function showWelcomeAlert() {
+        var name = prompt("por favor, insara seu nome:");
+        if (name !== null && name !== "") {
+            alert("bem vindo, " + name + "!");
+        }
+    }   
+</script>
+</body>
+</html>
+
+<!-- Colocar no <head>:Garante que o script seja executado antes de qualquer elemento que seja colocado no <body>.
+    O script será carregado e executado antes que a página seja totalmente renderizada.
+    Isso garante que o script esteja pronto para agir quando a página for “montada”.
+    A desvantagem é que o usuário verá uma página em branco até que o script termine de executar.
+
+    Colocar no final do <body>:
+    Permite que o conteúdo antes dele já apareça para o usuário sem esperar sua execução.
+    Dá a impressão de um site mais rápido, pois o usuário não precisa esperar cada detalhe estar pronto antes de ler o conteúdo da página.
+    A desvantagem é que, se o script modifica significativamente o conteúdo ou a apresentação, o usuário verá uma página “estranha” antes que o script a “corrija”. -->
