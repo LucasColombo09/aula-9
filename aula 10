@@ -6,30 +6,30 @@
     <title>votação</title>
 </head>
 <body>
-    <h1>Vote em seu candidato:</h1>
-    <button onclick="votar('lula')">Lula</button>
-    <button onclick="votar('bolsonaro')">Bolsonaro</button>
+    <h1>Qual time é maior?</h1>
+    <button onclick="votar('São Paulo')">São Paulo</button>
+    <button onclick="votar('Corinthians')">Corinthians</button>
     <h2>Resultados:</h2>
-    <p id="votosLula">Lula: 0 voto(s)</p>
-    <p id="votosBolsonaro">Bolsonaro: 0 voto(s)</p>
+    <p id="votosSãoPaulo">São Paulo: 0 voto(s)</p>
+    <p id="votosCorinthians">Corinthians: 0 voto(s)</p>
     
     <script src="votacao.js"></script>
     
     <script>
-let votosLula = 0;
-let votosBolsonaro = 0;
+let votosSãoPaulo = 0;
+let votosCorinthians = 0;
 
 
-function votar(candidato) {
+function votar(time) {
    
-    if (candidato === 'lula') {
-        votosLula++;
-        alert('por isso que o brasil ta ruim')
+    if (time === 'São Paulo') {
+        votosSãoPaulo++;
+        alert('Obrigado pelo seu voto!')
 
-    } else if (candidato === 'bolsonaro') {
-        votosBolsonaro++;
+    } else if (time === 'Corinthians') {
+        votosCorinthians++;
         
-        alert("Parabéns!");
+        alert("Obrigado pelo seu voto!");
     }
  
     atualizarResultados();
@@ -38,8 +38,8 @@ function votar(candidato) {
 
 function atualizarResultados() {
    
-    document.getElementById('votosLula').innerText = `Lula: ${votosLula} voto(s)`;
-    document.getElementById('votosBolsonaro').innerText = `Bolsonaro: ${votosBolsonaro} voto(s)`;
+    document.getElementById('votosSãoPaulo').innerText = `São Paulo: ${votosSãoPaulo} voto(s)`;
+    document.getElementById('votosCorinthians').innerText = `Corinthians: ${votosCorinthians} voto(s)`;
 }
     </script>
  
